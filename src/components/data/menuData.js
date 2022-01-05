@@ -7,4 +7,10 @@ export const menuData = [
     {title: "Log In", link:"/logIn", icon:""},   
   ]
 
+  export const tooltipData = [
+    {title: "Log In", link:"/logIn", icon:""},  
+    {title: "Log In", link:"/logIn", icon:""},  
+    {title: "Log In", link:"/logIn", icon:""},  
+  ]
+
   
