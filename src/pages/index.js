@@ -1,5 +1,5 @@
 import * as React from "react"
-//import { StaticImage } from "gatsby-plugin-image"
+import { StaticImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout/layout"
 import Seo from "../components/seo"
@@ -12,8 +12,10 @@ const IndexPage = () => (
   <Layout>
     <Seo title="Home" />
     <HeroSection />
+    <StaticImage src="../images/gatsby-astronaut.png"/>
 
   </Layout>
 )
 
 export default IndexPage
+

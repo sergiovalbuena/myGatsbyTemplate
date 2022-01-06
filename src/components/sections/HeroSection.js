@@ -12,7 +12,7 @@ export default function HeroSection(){
         <Wrapper>
             <ContentWrapper>
                 <TextWrapper>
-                <Title>React Template</Title>
+                <Title>React <span>Template</span> Title</Title>
                 <p>Welcome to your new Gatsby site.</p>
                 <p>Now go build something great.</p>
                 <p>
@@ -46,11 +46,20 @@ const animation = keyframes`
 `
 const Wrapper = styled.div`
     background: salmon;
+    overflow: hidden;
 `
 const ContentWrapper = styled.div`
     max-width: 1234px;
     margin: 0 auto;
     padding: 200px 300px;
+    display: grid;
+    grid-template-columns: 360px auto;
+
+    @media (max-width: 450px){
+        grid-template-columns: auto;
+        gap:60px;
+        padding:150px 20px 250px;
+    }
 `
 const TextWrapper = styled.div`
     max-width: 360px;
@@ -80,7 +89,21 @@ const Title = styled(H1)`
     color: ${themes.dark.text1};
     opacity: 0;
     animation: ${animation} 1s .2s forwards;
+    background: linear-gradient(180deg, #730040 0%, #301cbe 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
 
+    span{
+        background: linear-gradient(180deg, #ffd7ff 0%, #ffb6ff 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+
+    @media (max-width: 450px){
+        font-size: 40px;
+    }
 `
 
 
